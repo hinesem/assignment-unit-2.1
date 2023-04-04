@@ -84,17 +84,32 @@ if (pets < allowedNumPets) {
 // be sure to think through all the scenarios. 
 // console.log `mostPets` after the conditional has run.
 
+/*  why does this not work?
+let mostPets;
+
+if (pets > friendsPets) {
+    mostPets = pets;
+    console.log('You have more pets than your friend:' mostPets);
+} else if (friendsPets > pets) {
+    mostPets = friendsPets;
+    console.log('Your friend has more pets than you:' mostPets);
+} else {
+    console.log(`You both have the same number of pets:${pets}`);
+}
+*/
+
 let mostPets = "";
 
 if (pets > friendsPets) {
     mostPets = mostPets += pets;
-    console.log(mostPets);
+    console.log(`You have ${mostPets} pets. Your friend has ${friendsPets}`);
 } else if (friendsPets > pets) {
     mostPets = mostPets += friendsPets;
-    console.log(mostPets);
+    console.log(`Your friend has ${mostPets}. You have ${pets}`);
 } else {
     console.log("You both have the same number of pets");
 }
+
 
 // 17 - Write a *switch* statement that logs:
 //      "First is the worst" if your lucky number is 1
@@ -120,4 +135,6 @@ switch(luckyNumber) {
 // 18 -- Rewrite question 13 with a `ternary` operator. You'll need to do research!
 const age = prompt("How old are you?");
 age >= 21 ? console.log("I'll need a beer to help me understand ternary operators 🍻"): console.log("I'll take a glass of deconstructed ice 💧");
+
+
 
